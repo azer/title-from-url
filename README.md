@@ -1,11 +1,11 @@
-## url-to-title
+## title-from-url
 
 Generate a title from given URL
 
 ## Install
 
 ```bash
-$ npm install url-to-title
+$ npm install title-from-url
 ```
 
 ## Usage
