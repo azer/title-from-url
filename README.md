@@ -19,3 +19,5 @@ urlToTitle('http://wikipedia.org')
 urlToTitle('https://encrypted.google.com/search?q=foo&bar=qux')
 // => Search (q:foo, bar:qux) @ Encrypted, Google
 ```
+
+see `test.js` for more info.
