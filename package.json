@@ -1,0 +1,25 @@
+{
+  "name": "title-from-url",
+  "version": "0.0.0",
+  "description": "Generate a title from given URL",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "keywords": [
+    "title",
+    "url"
+  ],
+  "repository": {
+    "url": "git@github.com:azer/title-from-url.git",
+    "type": "git"
+  },
+  "author": "azer",
+  "license": "BSD",
+  "devDependencies": {
+    "prova": "^2.0.3"
+  },
+  "dependencies": {
+    "to-title": "0.0.0"
+  }
+}
