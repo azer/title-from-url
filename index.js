@@ -3,6 +3,7 @@ var toTitle = require("to-title");
 module.exports = urlToTitle;
 
 function urlToTitle (url) {
+  url = unescape(url).replace(/_/g, ' ');
   url = url.replace(/^\w+:\/\//, '');
   url = url.replace(/^www\./, '');
 
