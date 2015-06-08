@@ -1,6 +1,6 @@
 {
   "name": "title-from-url",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Generate a title from given URL",
   "main": "index.js",
   "scripts": {
