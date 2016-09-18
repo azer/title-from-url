@@ -6,6 +6,7 @@ function urlToTitle (url) {
   url = unescape(url).replace(/_/g, ' ');
   url = url.replace(/^\w+:\/\//, '');
   url = url.replace(/^www\./, '');
+  url = url.replace(/(\/|\?)$/, '');
 
   var parts = url.split('?');
   var qs = parts[1];
@@ -28,5 +29,5 @@ function urlToTitle (url) {
     qs = '';
   }
 
-  return toTitle(parts.slice(1).reverse().join(' - ')) + qs + ' @ ' + toTitle(name.split('.').join(', '));
+  return toTitle(parts.slice(1).reverse().join(' - ')) + qs + ' on ' + toTitle(name.split('.').join(', '));
 }
