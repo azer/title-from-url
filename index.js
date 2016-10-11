@@ -21,5 +21,5 @@ function urlToTitle (url) {
     return toTitle(name);
   }
 
-  return toTitle(parts.slice(1).reverse().join(' - ')) + ' on ' + toTitle(name.split('.').join(', '));
+  return toTitle(parts.slice(1).reverse().map(toTitle).join(' - ')) + ' on ' + toTitle(name.split('.').join(', '));
 }
