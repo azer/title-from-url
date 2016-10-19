@@ -15,11 +15,19 @@ function urlToTitle (url) {
   parts = url.split('/');
 
   var name = parts[0];
-  name = name.replace(/\.\w+(\/|$)/, '').replace(/\.(com?|net|org)$/, '')
+  name = name.replace(/\.\w+(\/|$)/, '').replace(/\.(com?|net|org|fr)$/, '')
 
   if (parts.length == 1) {
-    return toTitle(name);
+    return title(name);
   }
 
-  return toTitle(parts.slice(1).reverse().map(toTitle).join(' - ')) + ' on ' + toTitle(name.split('.').join(', '));
+  return toTitle(parts.slice(1).reverse().map(toTitle).join(' - ')) + ' on ' + title(name);
+}
+
+function title (host) {
+  if (/^[\w\.\-]+:\d+/.test(host)) {
+    return host
+  }
+
+  return toTitle(host.split('.').join(', '))
 }
